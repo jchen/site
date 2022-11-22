@@ -1,3 +1,6 @@
+---
+aliases: [/about/,/contact/]
+---
 ![Jiahua Chen](images/jchen.jpg)
 
 👋 Heya! I'm a student at Brown studying Math, Computer Science and Visual Arts. I also love design 🖋️, photography 📷, and data journalism 📊. I grew up in Hong Kong and currently live in Shanghai and Providence, RI. 
