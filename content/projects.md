@@ -1,6 +1,5 @@
 ---
 title: "Projects"
-date: 2022-11-22T00:18:51-05:00
 draft: false
 menu: main
 ---
