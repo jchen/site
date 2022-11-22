@@ -1,6 +1,7 @@
 ---
 title: "Projects"
 draft: false
+url: "/projects/"
 menu: main
 ---
 
