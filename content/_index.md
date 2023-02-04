@@ -16,7 +16,9 @@ View my [projects page](/projects/) to take a look at some of the projects I've 
 
 - 🗺️ Take a look at [Districtr](https://districtr.org/)! I've previously contributed extensively to voter rights and districting/gerrymandering research. This includes [data collection](https://districtr.org/nebraska) and [theoretical research](https://arxiv.org/abs/1911.09792). 
 - 🔧 I like [hackathons](https://devpost.com/Jiahua) (occasionally). Reach out if you wanna work with me on anything! 
-- 🖊️ I take course notes for math courses at Brown and they are public: [Math 1560](https://jchen.github.io/math1560-notes/notes.pdf); [Math 1580](https://jchen.github.io/math1580-notes/notes.pdf). 
+- 🖊️ I take course notes for math courses at Brown and they are public: 
+  - Spring 2022: [Math 1560](https://jchen.github.io/math1560-notes/notes.pdf); [Math 1580](https://jchen.github.io/math1580-notes/notes.pdf). 
+  - Spring 2023: [Math 1010](https://jchen.github.io/math1010-notes/notes.pdf); [CSCI 1515](https://brownappliedcryptography.github.io/notes/notes.pdf).
 
 ### [writing 🔗](/writing/)
 

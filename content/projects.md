@@ -17,3 +17,4 @@ I'm interested in creating designs and products that are both sustainable and in
 - [Pivot](/projects/pivot), Ivyhacks 2020
 - [ConnctMe](/projects/connctme), Hack@Home 2020
 - [Crowds](/projects/crowds), Hack@Brown 2021
+- [Meetr](https://devpost.com/software/meetr-q4ywjd), Hack@Brown 2023
