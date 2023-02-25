@@ -9,8 +9,7 @@ Heya! I'm a student at Brown studying Math, Computer Science and Visual Arts. I 
 
 I grew up in Hong Kong and currently live in Shanghai and Providence, RI. My pronouns are *he/him/his*.
 
-I've been a TA for courses like [discrete math](https://cs22.io/), [programming languages](https://cs.brown.edu/courses/cs173/2022/), and [applied cryptography](https://brownappliedcryptography.github.io/). I'm passionate about the TA program at Brown and work as an [MTA](https://cs.brown.edu/degrees/undergrad/jobs/meta-ta/) to support TAs in their role. 
-<!-- Previously, I've worked on metrics logging infrastructure at [Meta](https://www.meta.com/).  -->
+I've been a TA for courses like [discrete math](https://cs22.io/), [programming languages](https://cs.brown.edu/courses/cs173/2022/), and [applied cryptography](https://brownappliedcryptography.github.io/). I'm passionate about the TA program at Brown and work as an [MTA](https://cs.brown.edu/degrees/undergrad/jobs/meta-ta/) to support TAs in their role. Last summer, I worked on the metrics logging infrastructure at [Meta](https://www.meta.com/). 
 
 ### [projects](/projects/)
 
