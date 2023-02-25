@@ -1,7 +1,55 @@
 ---
 const today = new Date()
+import child_process from 'child_process'
+
+let filename = new URL(Astro.request.url)
+filename = filename.pathname
+
+let longHash, shortHash, lastMod, repoLink
+
+const showFooter = import.meta.env.MODE === 'production'
+
+if (showFooter) {
+    longHash = child_process.execSync('git rev-parse HEAD').toString().trim()
+
+    shortHash = child_process
+        .execSync('git rev-parse --short HEAD')
+        .toString()
+        .trim()
+
+    lastMod = child_process
+        .execSync('git show -s --format=%ct')
+        .toString()
+        .trim()
+
+    lastMod = new Date(parseInt(lastMod) * 1000).toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+    })
+
+    repoLink = `https://github.com/jchen/site/tree/${longHash}`
+
+    if (longHash === '') {
+        showFooter = false
+    }
+}
 ---
 
 <footer class="p-6 text-center text-stone-500 dark:text-stone-400">
-    <tt>{'Made with <3 from Providence'}</tt>
+    <tt
+        >{
+            showFooter ? (
+                <span>
+                    Last commit{' '}
+                    <a href={repoLink} target="_blank">
+                        @{shortHash}
+                    </a>{' '}
+                    on {lastMod}.
+                </span>
+            ) : (
+                "git commit info: for prod's eyes only (⌐■_■)"
+            )
+        }</tt
+    >
 </footer>
