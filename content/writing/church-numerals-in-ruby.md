@@ -107,6 +107,6 @@ num_of_church[pow[three,four]]
 What about predecessor functions? Subtraction? 
 
 ---
-*These are my notes, slightly edited, for a lightning talk presented at [RubyConf Mini 2022](https://www.rubyconfmini.com/).*
+*These are my notes, slightly edited, for a lightning talk presented at [RubyConf Mini 2022](https://www.rubyconfmini.com/). See the exact lightning talk [here](https://youtu.be/M5uWyzBgPHs?t=973)!*
 
 To see more, take a look at [Tom Stuart's Programming with Nothing](https://tomstu.art/programming-with-nothing) (thanks to many who recommended this to me) and his book [Understanding Computation](https://computationbook.com/).
