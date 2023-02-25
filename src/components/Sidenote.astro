@@ -1,0 +1,55 @@
+---
+/**
+ * A sidenote for a given page.
+ */
+---
+
+<span class="sidenote">
+    <i>
+        <span class="sidenote-bracket">[</span>
+        <slot />
+        <span class="sidenote-bracket">]</span>
+    </i>
+</span>
+
+<style>
+    .sidenote {
+        display: block;
+        padding-left: 2em;
+        position: absolute;
+        left: calc(50% + 37.5ch + 1em);
+        width: 10%;
+        font-size: 0.9em;
+        line-height: 1.4;
+        /* font-style: italic; */
+        transform: translateY(-2em);
+    }
+
+    .sidenote .sidenote-bracket {
+        display: none;
+    }
+
+    @media (max-width: 1200px) {
+        .sidenote {
+            left: calc(50% + 32.5ch + 2em);
+        }
+    }
+
+    @media (max-width: 1000px) {
+        .sidenote {
+            position: relative;
+            padding-left: 0;
+            font-size: 1em;
+            line-height: inherit;
+            font-style: inherit;
+            left: auto;
+            width: auto;
+            transform: none;
+        }
+
+        .sidenote,
+        .sidenote .sidenote-bracket {
+            display: inline;
+        }
+    }
+</style>

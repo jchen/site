@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Base.astro
+layout: '@layouts/Base.astro'
 title: Modified SRI
 description: Health infomatics analysis on sleep/wake data of over 150,000 participants to enrich sleep tracking measures and analyses.
 url: /projects/sleep-regularity-research/
@@ -7,7 +7,13 @@ aliases: [/work/sleep-regularity-research/]
 draft: false
 ---
 
-![Jiahua Chen](sleep-regularity-research/poster.jpg)
+import { Picture } from '@astrojs/image/components'
+
+<Picture
+    src={import('./poster.jpg')}
+    alt="Sleep Regularity Index Poster"
+    widths={[400, 800, 1200]}
+/>
 
 Research done while I was with [Brown HCI lab](https://hci.cs.brown.edu/) in Fall, 2021.
 

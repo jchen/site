@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Base.astro
+layout: '@layouts/Base.astro'
 title: Pivot
 description: Comprehensive, virtual classroom toolbox designed for remote education. Including live Q&A, polling, and quizzing features.
 draft: false
@@ -8,6 +8,7 @@ aliases: [/work/pivot/]
 ---
 
 import { YouTube } from '@astro-community/astro-embed-youtube'
+import { Picture } from '@astrojs/image/components'
 
 # Pivot
 
@@ -45,12 +46,12 @@ We see a lot of potential for improvement in Pivot's transcript feature! In the 
 
 ## Screenshots
 
-![Screenshot 1](pivot/1.png)
+<Picture src={import('./1.png')} alt="Screenshot 1" widths={[400, 800, 1200]} />
 
-![Screenshot 2](pivot/2.png)
+<Picture src={import('./2.png')} alt="Screenshot 2" widths={[400, 800, 1200]} />
 
-![Screenshot 3](pivot/3.png)
+<Picture src={import('./3.png')} alt="Screenshot 3" widths={[400, 800, 1200]} />
 
-![Screenshot 4](pivot/4.png)
+<Picture src={import('./4.png')} alt="Screenshot 4" widths={[400, 800, 1200]} />
 
-![Screenshot 5](pivot/5.png)
+<Picture src={import('./5.png')} alt="Screenshot 5" widths={[400, 800, 1200]} />

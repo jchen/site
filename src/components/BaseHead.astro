@@ -4,14 +4,15 @@
 import '../styles/global.css'
 
 export interface Props {
-    title: string
-    description: string
-    image?: string
+    title: string;
+    description: string;
+    image?: string;
+    mathjax?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
-const { title, description, image } = Astro.props
+const { title, description, image, mathjax = false } = Astro.props
 ---
 
 <!-- Global Metadata -->
@@ -46,4 +47,18 @@ const { title, description, image } = Astro.props
 
 <!-- Adobe Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/svk6bws.css">
+
+<!-- MathJax -->
+{
+	mathjax && (
+		<>
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6" />
+			<script
+				id="MathJax-script"
+				async
+				src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+			/>
+		</>
+	)
+}
 

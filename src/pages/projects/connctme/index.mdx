@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Base.astro
+layout: '@layouts/Base.astro'
 title: 'Connctme'
 description: 'Networking, six feet apart.'
 url: '/projects/connctme/'
@@ -8,6 +8,7 @@ draft: false
 ---
 
 import { YouTube } from '@astro-community/astro-embed-youtube'
+import { Picture } from '@astrojs/image/components'
 
 # ConnctMe
 
@@ -41,10 +42,10 @@ We hope to incorporate more features to help users stay connected, such as remin
 
 ## Screenshots
 
-![Screenshot 1](connctme/1.png)
+<Picture src={import('./1.png')} alt="Screenshot 1" widths={[400, 800, 1200]} />
 
-![Screenshot 2](connctme/2.png)
+<Picture src={import('./2.png')} alt="Screenshot 2" widths={[400, 800, 1200]} />
 
-![Screenshot 3](connctme/3.png)
+<Picture src={import('./3.png')} alt="Screenshot 3" widths={[400, 800, 1200]} />
 
-![Screenshot 4](connctme/4.png)
+<Picture src={import('./4.png')} alt="Screenshot 4" widths={[400, 800, 1200]} />
