@@ -6,7 +6,7 @@ aliases: [/work/sleep-regularity-research/]
 description: Health infomatics analysis on sleep/wake data of over 150,000 participants to enrich sleep tracking measures and analyses.
 ---
 
-![Jiahua Chen](poster.jpeg)
+![Jiahua Chen](poster.jpg)
 
 Research done while I was with [Brown HCI lab](https://hci.cs.brown.edu/) in Fall, 2021.
 

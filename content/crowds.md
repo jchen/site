@@ -8,7 +8,7 @@ description: "Crowdsourced & secure contact-tracing and crowding information agg
 
 # Crowds
 
-<iframe src="https://www.youtube.com/embed/S6gSKspx3eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9;"></iframe>
+{{< youtube S6gSKspx3eo >}}
 
 *Crowds was presented at Hack@Brown 2021, where it won the Wolfram Award.*
 

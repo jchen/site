@@ -8,7 +8,7 @@ description: "Networking, six feet apart."
 
 # ConnctMe
 
-<iframe src="https://www.youtube.com/embed/DJWlZnFEFG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9;"></iframe>
+{{< youtube DJWlZnFEFG0 >}}
 
 *ConnctMe was presented at Hack@Home 2020, where it won "Best Use of Google Cloud".* 
 

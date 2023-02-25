@@ -8,7 +8,7 @@ description: Comprehensive, virtual classroom toolbox designed for remote educat
 
 # Pivot
 
-<iframe src="https://www.youtube.com/embed/9bxkNTe0DMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9;"></iframe>
+{{< youtube 9bxkNTe0DMw >}}
 
 *Pivot was presented at Ivyhacks 2020, where it won Best Multiplayer Product.*
 
