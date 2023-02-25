@@ -1,0 +1,10 @@
+# From Netlify subdomain to our own domain
+https://jiahuac.netlify.app/*   https://jiahua.io/:splat    301!
+http://jiahuac.netlify.app/*    https://jiahua.io/:splat    301!
+
+# Index redirects
+/about  /   301
+/contact    /   301
+
+# For work -> projects
+/work/* /projects/:splat    301
