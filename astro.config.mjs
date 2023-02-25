@@ -3,17 +3,18 @@ import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
-import compress from 'astro-compress'
+// Takes too long to build, especially with image library
+// import compress from 'astro-compress'
 import { defineConfig } from 'astro/config'
 
 export default defineConfig({
-    site: 'https://example.com',
+    site: 'https://jiahua.io',
     integrations: [
         mdx(),
         sitemap(),
         tailwind(),
         react(),
-        compress(),
+        // compress(),
         image({
             serviceEntryPoint: '@astrojs/image/sharp',
         }),
