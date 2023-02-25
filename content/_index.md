@@ -5,7 +5,7 @@ aliases: [/about/,/contact/]
 {{< cowsay >}}
 
 
-Heya! I'm a student at Brown studying Math, Computer Science and Visual Arts. I love design, photography, data journalism, and occasionally a dash of formal methods. 
+Hey! I'm a student at Brown studying Math, Computer Science and Visual Arts. I love design, photography, data journalism, and occasionally a dash of formal methods. 
 
 I grew up in Hong Kong and currently live in Shanghai and Providence, RI. My pronouns are *he/him/his*.
 
@@ -30,4 +30,4 @@ Me writing about anything and everything that interests me (condition, of course
 Please feel more than free to reach out to me [here](mailto:hey@jiahua.io). A copy of my résumé is available on request.
 
 ---
-here's my [email](mailto:hey@jiahua.io), [github](https://github.com/jchen), [linkedin](https://www.linkedin.com/in/~jc), [instagram](https://instagram.com/jahachen), and [keybase](https://keybase.io/jiahuac).
+here's my [email](mailto:hey@jiahua.io), [github](https://github.com/jchen), [linkedin](https://www.linkedin.com/in/~jc), [instagram](https://instagram.com/jahachen), [discord](https://discordapp.com/users/405941251775397899) and [keybase](https://keybase.io/jiahuac).
