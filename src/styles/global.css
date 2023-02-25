@@ -1,67 +1,127 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-body {
-	font-family: Verdana, sans-serif;
-	margin: auto;
-	padding: 20px;
-	max-width: 65ch;
-	text-align: left;
-	background-color: #fff;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	line-height: 1.5;
-	color: #444;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-	color: #222;
-}
-a {
-	color: #3273dc;
-}
-nav a {
-	margin-right: 10px;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-content {
-	line-height: 1.6;
-}
-table {
-	width: 100%;
-}
-img {
-	max-width: 100%;
-	height: auto;
-}
-code {
-	padding: 2px 5px;
-	background-color: #f2f2f2;
-}
-pre {
-	padding: 1rem;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border: 1px solid #999;
-	color: #222;
-	padding: 2px 0px 2px 20px;
-	margin: 0px;
-	font-style: italic;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply m-auto;
+        @apply p-5;
+        @apply max-w-3xl;
+        @apply text-left;
+        @apply bg-white;
+        @apply dark:bg-stone-800;
+        @apply break-words;
+        @apply leading-normal;
+        @apply text-stone-800;
+        @apply dark:text-stone-300;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+        @apply text-stone-800;
+        @apply dark:text-stone-100;
+        @apply font-bold;
+    }
+    h1 {
+        @apply text-[2em];
+        @apply my-[0.67em];
+    }
+    h2 {
+        @apply text-[1.5em];
+        @apply my-[0.83em];
+    }
+    h3 {
+        @apply text-[1.17em];
+        @apply my-[1em];
+    }
+    h4 {
+        @apply text-[1em];
+        @apply my-[1.33em];
+    }
+    h5 {
+        @apply text-[0.83em];
+        @apply my-[1.67em];
+    }
+    h6 {
+        @apply text-[0.67em];
+        @apply my-[2.33em];
+    }
+    a {
+        @apply text-blue-500;
+        @apply hover:text-blue-800;
+        @apply dark:text-blue-300;
+        @apply decoration-0;
+        @apply hover:decoration-1;
+        @apply hover:underline;
+    }
+    p {
+        @apply block;
+        @apply my-4;
+    }
+    nav > a {
+        @apply inline-block;
+        @apply decoration-0;
+        @apply mr-2.5;
+        @apply lowercase;
+    }
+    nav > a.active {
+        @apply font-semibold;
+    }
+    textarea {
+        @apply w-full;
+        @apply text-base;
+        @apply dark:bg-stone-800;
+        @apply dark:text-stone-300;
+    }
+    input {
+        @apply text-base;
+        @apply dark:bg-stone-800;
+        @apply dark:text-stone-300;
+    }
+    content {
+        @apply leading-relaxed;
+    }
+    table {
+        @apply w-full;
+    }
+    img {
+        @apply max-w-full;
+        @apply h-auto;
+    }
+    pre {
+        @apply p-4;
+    }
+    :not(pre, h1, h2, h3, h4, h5, h6) > code {
+        @apply px-1.5;
+        @apply bg-stone-200;
+        @apply dark:bg-stone-700;
+        @apply rounded-md;
+        @apply text-sm;
+    }
+    blockquote {
+        @apply border;
+        @apply border-stone-400;
+        @apply text-stone-800;
+        @apply dark:text-stone-300;
+        @apply pl-5;
+        @apply italic;
+    }
+    ul {
+        @apply list-disc;
+        @apply list-outside;
+        @apply pl-10;
+        @apply my-4;
+    }
+    ul ul {
+        @apply list-[circle];
+        @apply my-0;
+    }
+    li {
+        @apply list-item;
+    }
 }

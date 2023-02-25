@@ -1,13 +1,16 @@
 ---
-const { date } = Astro.props;
+const { date } = Astro.props
 ---
 
-<time datetime={date.toISOString()}>
-	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
-	}
+<time
+    datetime={date.toISOString()}
+    class="italic flex-[0_0_140px] text-stone-500 dark:text-stone-300"
+>
+    {
+        date.toLocaleDateString('en-us', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+        })
+    }
 </time>
