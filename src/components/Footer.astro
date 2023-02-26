@@ -1,24 +1,37 @@
 ---
-const today = new Date()
 import child_process from 'child_process'
+import { GITHUB_REPO } from '../consts'
 
-let filename = new URL(Astro.request.url)
-filename = filename.pathname
+const today = new Date()
 
-let longHash, shortHash, lastMod, repoLink
+type Props = {
+    filepath?: string
+}
 
-const showFooter = import.meta.env.MODE === 'production'
+const filepath = Astro.props.filepath ?? ''
+
+let relativeFilePath, longHash, shortHash, lastMod, repoLink
+
+let showFooter = import.meta.env.MODE === 'production'
 
 if (showFooter) {
-    longHash = child_process.execSync('git rev-parse HEAD').toString().trim()
+    relativeFilePath = filepath ? child_process
+        .execSync(`git ls-files --full-name ${filepath}`)
+        .toString()
+        .trim() : ''
+
+    longHash = child_process
+        .execSync(`git log -n 1 --pretty=format:%H -- ${filepath}`)
+        .toString()
+        .trim()
 
     shortHash = child_process
-        .execSync('git rev-parse --short HEAD')
+        .execSync(`git log -n 1 --pretty=format:%h -- ${filepath}`)
         .toString()
         .trim()
 
     lastMod = child_process
-        .execSync('git show -s --format=%ct')
+        .execSync(`git log -n 1 --pretty=format:%ct -- ${filepath}`)
         .toString()
         .trim()
 
@@ -28,24 +41,22 @@ if (showFooter) {
         year: 'numeric',
     })
 
-    repoLink = `https://github.com/jchen/site/tree/${longHash}`
+    repoLink = `https://github.com/${GITHUB_REPO}/${relativeFilePath ? 'blob' : 'tree'}/${longHash}/${relativeFilePath}`
 
     if (longHash === '') {
         showFooter = false
     }
 }
 ---
-
-<footer class="p-6 text-center text-stone-500 dark:text-stone-400">
+<footer class="p-6 text-center text-stone-500 dark:text-stone-400" data-nosnippet>
     <tt
-        >{
-            showFooter ? (
-                <span>
-                    Last commit{' '}
-                    <a href={repoLink} target="_blank">
-                        @{shortHash}
-                    </a>{' '}
-                    on {lastMod}.
+    >{
+        showFooter ? (
+            <span>
+                Last updated{' '}
+                    <!-- prettier-ignore -->
+                    <a href={repoLink} target="_blank">@{shortHash}</a>
+                    on {lastMod}. &#60;3
                 </span>
             ) : (
                 "git commit info: for prod's eyes only (⌐■_■)"

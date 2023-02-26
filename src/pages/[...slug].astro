@@ -1,6 +1,6 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content'
 import BlogPost from '@layouts/BlogPost.astro'
+import { CollectionEntry,getCollection } from 'astro:content'
 
 export async function getStaticPaths() {
     const posts = await getCollection('blog')
@@ -13,8 +13,9 @@ type Props = CollectionEntry<'blog'>
 
 const post = Astro.props
 const { Content } = await post.render()
+const filepath = `./src/content/blog/${post.id}`
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} filepath={filepath}>
     <Content />
 </BlogPost>

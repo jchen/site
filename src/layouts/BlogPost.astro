@@ -1,12 +1,15 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import Base from '../layouts/Base.astro';
+import type { CollectionEntry } from 'astro:content'
+import Base from '../layouts/Base.astro'
 
-type Props = CollectionEntry<'blog'>['data']
+type Props = CollectionEntry<'blog'>['data'] & {
+    filepath?: string
+}
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props
+const { title, description, pubDate, updatedDate, heroImage, filepath } =
+    Astro.props
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} filepath={filepath}>
     <slot />
 </Base>

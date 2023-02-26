@@ -1,14 +1,16 @@
 ---
-import FormattedDate from '@components/FormattedDate.astro';
-import Base from '@layouts/Base.astro';
-import { getCollection } from 'astro:content';
+import FormattedDate from '@components/FormattedDate.astro'
+import Base from '@layouts/Base.astro'
+import { getCollection } from 'astro:content'
 
 const posts = (await getCollection('blog')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 )
+
+const filepath = import.meta.url.replace(/^file:\/\//, '')
 ---
 
-<Base title="Writing">
+<Base title="Writing" filepath={filepath}>
     <section>
         <ul class="list-none p-0">
             {
