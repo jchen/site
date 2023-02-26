@@ -1,0 +1,69 @@
+---
+// TODO: Complete this up, x button not working so far
+---
+
+<!-- https://codepen.io/jhc/pen/gOeBRoj -->
+<div
+    class="p-1 fixed bottom-0 left-0 w-full bg-blue-400 text-white hidden"
+    id="footer-info-bar"
+>
+    <div class="max-w-3xl my-0 mx-auto flex justify-between">
+        <div
+            class="bottom-bar-text pr-3 flex justify-center items-center flex-grow"
+            id="footer-info-text"
+        >
+        </div>
+        <button
+            class="bottom-bar-close"
+            type="button"
+            onclick="hideBottomBanner();"
+        >
+            &times;
+        </button>
+    </div>
+</div>
+<style>
+    .bottom-bar-content > * {
+        display: flex;
+        align-items: center;
+    }
+
+    .bottom-bar-close {
+        /* background: none; */
+        /* border: none; */
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 2em;
+    }
+</style>
+<script>
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    const referrer = urlParams.get('from')
+    const footerInfoBar = document.getElementById('footer-info-bar')
+    const footerInfoText = document.getElementById('footer-info-text')
+
+    if (referrer != null && footerInfoText && footerInfoBar) {
+        switch (referrer) {
+            case 'jc.hn':
+                footerInfoText.innerHTML =
+                    '<span>You came here from <span class="code">jc.hn</span>, which I use for shortlinks.</span>'
+                footerInfoBar.style.display = 'block'
+                break
+            case 'jiahua.org':
+                footerInfoText.innerHTML =
+                    '<span>You came here from <span class="code">jiahua.org</span> - I send emails from <span class="code">[initials]@jiahua.org</span>.</span>'
+                footerInfoBar.style.display = 'block'
+                break
+            default:
+                break
+        }
+    }
+
+    window.history.replaceState({}, document.title, window.location.pathname)
+    window.history.pushState({}, document.title, window.location.pathname)
+
+    function hideBottomBanner() {
+        if (footerInfoBar) footerInfoBar.style.display = 'none'
+    }
+</script>
