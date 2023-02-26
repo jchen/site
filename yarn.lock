@@ -104,6 +104,21 @@
     unist-util-visit "^4.1.0"
     vfile "^5.3.2"
 
+"@astrojs/partytown@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-1.0.3.tgz#87747ed4e9d262a73898ce65628234c2542321c5"
+  integrity sha512-u2/pG9owRipICz/PksLUUqUat98sm0/YODvv3/IKKJ0JCwF7+0olbMvyyvoj7kJooIXh0XowcOjEs5vhCYFo5g==
+  dependencies:
+    "@builder.io/partytown" "^0.7.4"
+    mrmime "^1.0.0"
+
+"@astrojs/prefetch@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/prefetch/-/prefetch-0.1.2.tgz#ec3cdfb52dd4c7e79348d796986ff177241e55af"
+  integrity sha512-Plf1GLKDyvTHjEKVMH922wc1AmvlFYvEXrbdaMAlgJuoqTRXirP1CennildFHndTetH8swWMlVGwxdG57dN7cA==
+  dependencies:
+    throttles "^1.0.1"
+
 "@astrojs/prism@^2.0.0":
   version "2.0.0"
   resolved "https://registry.npmjs.org/@astrojs/prism/-/prism-2.0.0.tgz"
@@ -129,7 +144,7 @@
 
 "@astrojs/sitemap@^1.1.0":
   version "1.1.0"
-  resolved "https://registry.npmjs.org/@astrojs/sitemap/-/sitemap-1.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-1.1.0.tgz#fc4df42879f20642a5b758a94ad7610050b3e11a"
   integrity sha512-JnKZcbD0WdFxw2VAj3qXb0cYKuvk6nwBYPfUy+plSa9TC9hikQrDFpd7yapOPTRf3AdmUittzFckoTw/nUilCw==
   dependencies:
     sitemap "^7.1.1"
@@ -376,6 +391,11 @@
     "@babel/helper-string-parser" "^7.19.4"
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
+
+"@builder.io/partytown@^0.7.4":
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.5.tgz#f501e3db37a5ac659f21ba0c2e61b278e58b64b9"
+  integrity sha512-Zbr2Eo0AQ4yzmQr/36/h+6LKjmdVBB3Q5cGzO6rtlIKB/IOpbQVUZW+XAnhpJmJr9sIF97OZjgbhG9k7Sjn4yw==
 
 "@emmetio/abbreviation@^2.2.3":
   version "2.2.3"
@@ -2998,6 +3018,11 @@ mri@^1.1.0:
   resolved "https://registry.npmjs.org/mri/-/mri-1.2.0.tgz"
   integrity sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==
 
+mrmime@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mrmime/-/mrmime-1.0.1.tgz#5f90c825fad4bdd41dc914eff5d1a8cfdaf24f27"
+  integrity sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==
+
 ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
@@ -4047,6 +4072,11 @@ terser@5.16.5, terser@^5.15.1:
     acorn "^8.5.0"
     commander "^2.20.0"
     source-map-support "~0.5.20"
+
+throttles@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/throttles/-/throttles-1.0.1.tgz#3abdcde28df88d5eddf7e57cad8da35bd403ddd0"
+  integrity sha512-fab7Xg+zELr9KOv4fkaBoe/b3L0GMGLd0IBSCn16GoE/Qx6/OfCr1eGNyEcDU2pUA79qQfZ8kPQWlRuok4YwTw==
 
 tiny-glob@^0.2.9:
   version "0.2.9"

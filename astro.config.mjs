@@ -1,5 +1,7 @@
 import image from '@astrojs/image'
 import mdx from '@astrojs/mdx'
+import partytown from '@astrojs/partytown'
+import prefetch from '@astrojs/prefetch'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
@@ -7,6 +9,7 @@ import tailwind from '@astrojs/tailwind'
 // import compress from 'astro-compress'
 import { defineConfig } from 'astro/config'
 
+// https://astro.build/config
 export default defineConfig({
     site: 'https://jiahua.io',
     integrations: [
@@ -18,5 +21,7 @@ export default defineConfig({
         image({
             serviceEntryPoint: '@astrojs/image/sharp',
         }),
+        partytown(),
+        prefetch(),
     ],
 })
