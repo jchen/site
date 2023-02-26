@@ -2,6 +2,10 @@
 https://jiahuac.netlify.app/*   https://jiahua.io/:splat    301!
 http://jiahuac.netlify.app/*    https://jiahua.io/:splat    301!
 
+# From Cloudflare Pages
+https://jchen.pages.dev/* https://jiahua.io/:splat 301!
+http://jchen.pages.dev/* https://jiahua.io/:splat 301!
+
 # Index redirects
 /about  /   301
 /contact    /   301
