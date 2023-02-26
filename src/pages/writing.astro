@@ -7,7 +7,7 @@ const posts = (await getCollection('blog')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 )
 
-const filepath = import.meta.url.replace(/^file:\/\//, '')
+const filepath = `./src/pages/writing.astro`
 ---
 
 <Base title="Writing" filepath={filepath}>

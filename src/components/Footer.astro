@@ -13,6 +13,7 @@ const filepath = Astro.props.filepath ?? ''
 let relativeFilePath, longHash, shortHash, lastMod, repoLink
 
 let showFooter = import.meta.env.MODE === 'production'
+let error = false
 
 if (showFooter) {
     relativeFilePath = filepath ? child_process
@@ -44,23 +45,23 @@ if (showFooter) {
     repoLink = `https://github.com/${GITHUB_REPO}/${relativeFilePath ? 'blob' : 'tree'}/${longHash}/${relativeFilePath}`
 
     if (longHash === '') {
-        showFooter = false
+        error = true
     }
 }
 ---
 <footer class="p-6 text-center text-stone-500 dark:text-stone-400" data-nosnippet>
-    <tt
-    >{
-        showFooter ? (
+    <tt>{
+        (showFooter && !error) 
+        ? (
             <span>
                 Last updated{' '}
                     <!-- prettier-ignore -->
                     <a href={repoLink} target="_blank">@{shortHash}</a>
                     on {lastMod}. &#60;3
                 </span>
-            ) : (
-                "git commit info: for prod's eyes only (⌐■_■)"
             )
-        }</tt
-    >
+            : error
+            ? "<3"
+            : "git commit info: for prod's eyes only (⌐■_■)"
+        }</tt>
 </footer>
