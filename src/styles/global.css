@@ -55,6 +55,7 @@
         @apply text-blue-500;
         @apply hover:text-blue-800;
         @apply dark:text-blue-300;
+        @apply dark:hover:text-blue-500;
         @apply decoration-0;
         @apply hover:decoration-1;
         @apply hover:underline;
