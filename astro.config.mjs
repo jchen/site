@@ -1,13 +1,13 @@
-import image from '@astrojs/image'
-import mdx from '@astrojs/mdx'
-import partytown from '@astrojs/partytown'
-import prefetch from '@astrojs/prefetch'
-import react from '@astrojs/react'
-import sitemap from '@astrojs/sitemap'
-import tailwind from '@astrojs/tailwind'
+import image from '@astrojs/image';
+import mdx from '@astrojs/mdx';
+import partytown from '@astrojs/partytown';
+import prefetch from '@astrojs/prefetch';
+import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
 // Takes too long to build, especially with image library
-// import compress from 'astro-compress'
-import { defineConfig } from 'astro/config'
+import compress from 'astro-compress';
+import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,11 +17,17 @@ export default defineConfig({
         sitemap(),
         tailwind(),
         react(),
-        // compress(),
+        compress({
+            css: true,
+            html: true,
+            js: true,
+            img: false,
+            svg: false,
+        }),
         image({
             serviceEntryPoint: '@astrojs/image/sharp',
         }),
         partytown(),
         prefetch(),
     ],
-})
+});
