@@ -1,24 +1,24 @@
 ---
-import BaseHead from '@components/BaseHead.astro'
-import Footer from '@components/Footer.astro'
-import Header from '@components/Header.astro'
-import { SITE_DESCRIPTION,SITE_TITLE } from '../consts'
+import BaseHead from '@components/BaseHead.astro';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import { SITE_DESCRIPTION,SITE_TITLE } from '../consts';
 
 type Props = {
-    title?: string
-    description?: string
-    filepath?: string
-}
+    title?: string;
+    description?: string;
+    filepath?: string;
+};
 
-const frontmatter = Astro.props.frontmatter ?? {}
+const frontmatter = Astro.props.frontmatter ?? {};
 const title = frontmatter.title
     ? `${frontmatter.title} | ${SITE_TITLE}`
     : Astro.props.title
     ? `${Astro.props.title} | ${SITE_TITLE}`
-    : SITE_TITLE
+    : SITE_TITLE;
 const description = frontmatter.description
     ? frontmatter.description
-    : Astro.props.description ?? SITE_DESCRIPTION
+    : Astro.props.description ?? SITE_DESCRIPTION;
 ---
 
 <html lang="en">
@@ -31,6 +31,8 @@ const description = frontmatter.description
         <main>
             <slot />
         </main>
+        <!-- spacer so the footer goes to the bottom -->
+        <div class="grow"></div>
         <Footer filepath={Astro.props.filepath ?? Astro.props.file} />
     </body>
 </html>

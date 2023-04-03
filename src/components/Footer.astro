@@ -16,6 +16,14 @@ let showFooter = import.meta.env.MODE === 'production'
 let error = false
 
 if (showFooter) {
+    /**
+     * This will get the filepath attribute of the file if it exists, and
+     * get the commit hash of the last commit to this file to show in the
+     * footer. 
+     * 
+     * It only makes sense to be running this in production, since no commit
+     * will exist in development.
+     */
     relativeFilePath = filepath ? child_process
         .execSync(`git ls-files --full-name ${filepath}`)
         .toString()
@@ -49,7 +57,7 @@ if (showFooter) {
     }
 }
 ---
-<footer class="p-6 text-center text-stone-500 dark:text-stone-400 text-xs" data-nosnippet>
+<footer class="p-6 pb-10 text-center text-stone-500 dark:text-stone-400 text-xs" data-nosnippet>
     <tt>{
         (showFooter && !error) 
         ? (

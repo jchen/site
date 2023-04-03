@@ -4,6 +4,9 @@
 
 @layer base {
     body {
+        @apply flex;
+        @apply flex-col;
+        @apply min-h-screen;
         @apply m-auto;
         @apply p-5;
         @apply max-w-3xl;
