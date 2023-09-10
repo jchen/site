@@ -2,13 +2,12 @@
 layout: '@layouts/Base.astro'
 title: 'Crowds'
 description: 'Crowdsourced & secure contact-tracing and crowding information aggregating protocol/service.'
-draft: false
 url: '/projects/crowds/'
 aliases: [/work/crowds/]
 ---
 
 import { YouTube } from '@astro-community/astro-embed-youtube'
-import { Picture } from '@astrojs/image/components'
+import { Image } from 'astro:assets'
 
 # Crowds
 
@@ -64,12 +63,12 @@ Crowds is open to expansion and improvements. First of which, we hope to develop
 
 ## Screenshots
 
-<Picture src={import('./1.png')} alt="Screenshot 1" widths={[400, 800, 1200]} />
+<Image src={import('./1.png')} alt="Screenshot 1" />
 
-<Picture src={import('./2.png')} alt="Screenshot 2" widths={[400, 800, 1200]} />
+<Image src={import('./2.png')} alt="Screenshot 2" />
 
-<Picture src={import('./3.png')} alt="Screenshot 3" widths={[400, 800, 1200]} />
+<Image src={import('./3.png')} alt="Screenshot 3" />
 
-<Picture src={import('./4.png')} alt="Screenshot 4" widths={[400, 800, 1200]} />
+<Image src={import('./4.png')} alt="Screenshot 4" />
 
-<Picture src={import('./5.png')} alt="Screenshot 5" widths={[400, 800, 1200]} />
+<Image src={import('./5.png')} alt="Screenshot 5" />

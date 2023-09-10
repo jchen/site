@@ -4,11 +4,10 @@ title: 'Connctme'
 description: 'Networking, six feet apart.'
 url: '/projects/connctme/'
 aliases: [/work/connctme/]
-draft: false
 ---
 
 import { YouTube } from '@astro-community/astro-embed-youtube'
-import { Picture } from '@astrojs/image/components'
+import { Image } from 'astro:assets'
 
 # ConnctMe
 
@@ -42,10 +41,10 @@ We hope to incorporate more features to help users stay connected, such as remin
 
 ## Screenshots
 
-<Picture src={import('./1.png')} alt="Screenshot 1" widths={[400, 800, 1200]} />
+<Image src={import('./1.png')} alt="Screenshot 1" />
 
-<Picture src={import('./2.png')} alt="Screenshot 2" widths={[400, 800, 1200]} />
+<Image src={import('./2.png')} alt="Screenshot 2" />
 
-<Picture src={import('./3.png')} alt="Screenshot 3" widths={[400, 800, 1200]} />
+<Image src={import('./3.png')} alt="Screenshot 3" />
 
-<Picture src={import('./4.png')} alt="Screenshot 4" widths={[400, 800, 1200]} />
+<Image src={import('./4.png')} alt="Screenshot 4" />

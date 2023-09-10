@@ -1,6 +1,4 @@
-import image from '@astrojs/image';
 import mdx from '@astrojs/mdx';
-import partytown from '@astrojs/partytown';
 import prefetch from '@astrojs/prefetch';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
@@ -24,10 +22,6 @@ export default defineConfig({
             img: false,
             svg: false,
         }),
-        image({
-            serviceEntryPoint: '@astrojs/image/sharp',
-        }),
-        partytown(),
         prefetch(),
     ],
 });
