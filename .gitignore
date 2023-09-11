@@ -19,7 +19,14 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# Yarn cache
-.yarn
-
+# Bun lockfile (will need to regenerate)
 bun.lockb
+
+# Yarn ignores
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

@@ -35,5 +35,6 @@
   "trustedDependencies": [
     "astro",
     "sharp"
-  ]
+  ],
+  "packageManager": "yarn@3.6.3"
 }
