@@ -17,14 +17,11 @@ const filepath = `./src/pages/writing.astro`;
             {
                 posts.map((post) => (
                     <li>
-                        <div class="flex flex-col gow">
-                            <div class="flex">
-                                <FormattedDate date={post.data.pubDate} />
-                                <a rel="prefetch" href={`/${post.slug}/`}>
-                                    {post.data.title}
-                                </a>
-                            </div>
-                            <Tags tags={post.data.tags} />
+                        <div class="flex">
+                            <FormattedDate date={post.data.pubDate} />
+                            <a rel="prefetch" href={`/${post.slug}/`}>
+                                {post.data.title}
+                            </a>
                         </div>
                     </li>
                 ))
