@@ -1,0 +1,7 @@
+---
+const { tags } = Astro.props;
+---
+
+<div class="flex flex-row flex-wrap gap-x-5">
+    {tags.map((tag: string) => <div>#{tag}</div>)}
+</div>

@@ -2,6 +2,7 @@
 title: "Church Numerals in Ruby"
 description: "A quick and dirty introduction to numbers in λ calculus, with a twist of Ruby."
 pubDate: "2022-11-17"
+tags: ["programming-languages", "lambda-calculus"]
 ---
 
 # Church Numerals in Ruby
