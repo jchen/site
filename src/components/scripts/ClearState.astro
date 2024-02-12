@@ -1,7 +1,9 @@
 ---
+
 ---
 
 <script>
+    // This script will clear the URL of any query parameters
     window.history.replaceState({}, document.title, window.location.pathname);
     window.history.pushState({}, document.title, window.location.pathname);
 </script>
