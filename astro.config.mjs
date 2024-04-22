@@ -9,7 +9,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://jiahua.io',
+    site: 'https://jiahuachen.com',
     integrations: [
         mdx(),
         sitemap(),
