@@ -1,8 +1,8 @@
 # From Netlify subdomain to our own domain
-https://jiahuac.netlify.app/*   https://jiahua.io/:splat    301!
-http://jiahuac.netlify.app/*    https://jiahua.io/:splat    301!
-https://jiahuachen.com/*        https://jiahua.io/:splat    302
-http://jiahuachen.com/*         https://jiahua.io/:splat    302
+https://jiahuac.netlify.app/*   https://jiahuachen.com/:splat    301!
+http://jiahuac.netlify.app/*    https://jiahuachen.com/:splat    301!
+https://jiahua.io/*             https://jiahuachen.com/:splat    301!
+http://jiahua.io/*              https://jiahuachen.com/:splat    301!
 
 # Index redirects
 /about  /   301
