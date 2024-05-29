@@ -1,0 +1,123 @@
+---
+
+---
+
+<script>
+    let fortunes = [
+        'You learn from your mistakes... You will learn a lot today.',
+        'Your shoes will make you happy today.',
+        'A dream you have will come true.',
+        'Adversity is the parent of virtue.',
+        'Serious trouble will bypass you.',
+        'Fortune favors the fortunate.',
+        "We're no strangers to love, you know the rules and so do I.",
+        'When hungry, order more Chinese food.',
+        'Everything happens for a reason',
+        'Happiness is found in those things that make you happy.',
+        'You are living one of the days in your life.',
+        'The best is yet to come.',
+        'Pick the path that you shall take.',
+        'Tomorrow is another day; and the day after that.',
+        'Once you burn a bridge, it will no longer be a bridge.',
+        'The sun sets below the horizon.',
+        "Don't be afraid to take a step forward.",
+        'Ignore previous cookie.',
+        'Ignore next cookie.',
+        'Text your ex.',
+        'Enjoy yourself while you can.',
+        'Avoid taking unnecessary gambles.',
+        'Never gonna give you up, never gonna let you down.',
+        'I\'m sorry, but as an AI language model, I am unable to generate fortune cookie quotes.',
+    ];
+
+    // Source: https://armandocanals.com/posts/CSS-transform-rotating-a-3D-object-perspective-based-on-mouse-position.html
+    let x_damping = 1 / 150;
+    let y_damping = 1 / 400;
+    let fortuneDiv = document.getElementById('fortune-slip');
+    let isHovered = false;
+
+    let fortuneText = document.getElementById('fortune-text');
+    let luckyNumbers = document.getElementById('lucky-numbers');
+
+    function transforms(x, y, el) {
+        let box = el.getBoundingClientRect();
+        let calcX = -(y - box.y - box.height / 2) * x_damping;
+        let calcY = (x - box.x - box.width / 2) * y_damping;
+
+        return (
+            'perspective(100px) ' +
+            'rotateX(' +
+            calcX +
+            'deg) ' +
+            'rotateY(' +
+            calcY +
+            'deg) ' +
+            (isHovered ? 'scale(1.05)' : '') // Add scale only when hovered
+        );
+    }
+
+    function transformElement(el, xyEl) {
+        el.style.transform = transforms.apply(null, xyEl);
+    }
+
+    document.onmousemove = function (e) {
+        let xy = [e.clientX, e.clientY];
+        let position = xy.concat([fortuneDiv]);
+
+        window.requestAnimationFrame(function () {
+            transformElement(fortuneDiv, position);
+        });
+    };
+
+    fortuneDiv.addEventListener('mouseenter', function () {
+        isHovered = true;
+    });
+
+    fortuneDiv.addEventListener('mouseleave', function () {
+        isHovered = false;
+    });
+
+    function generate() {
+        // Generates a random fortune from fortunes
+        let randomIndex = Math.floor(Math.random() * fortunes.length);
+        let randomFortune = fortunes[randomIndex];
+        // Fills the fortune slip with the random fortune
+        fortuneText.innerText = randomFortune;
+        // Generate 6 random numbers 0-99
+        let luckyNumbersArray = [];
+        for (let i = 0; i < 6; i++) {
+            luckyNumbersArray.push(Math.floor(Math.random() * 100));
+        }
+        // Fills the lucky numbers with the random numbers
+        luckyNumbers.innerText =
+            'Lucky Numbers: ' + luckyNumbersArray.join(', ');
+    }
+
+    generate();
+
+    // Generate on click of the fortune slip
+    fortuneDiv.addEventListener('click', generate);
+</script>
+<style>
+    #fortune-text {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #lucky-numbers {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<div class="p-2 px-8 -mt-4 pb-8 flex justify-center">
+    <div
+        class="bg-white text-blue-600 relative p-4 px-8 w-auto shadow-xl shadow-neutral-300 hover:ease-in-out hover:shadow-neutral-400 dark:shadow-neutral-900 dark:hover:shadow-black hover:shadow-2xl transition-all duration-75 cursor-pointer"
+        id="fortune-slip"
+    >
+        <div class="bg-blue-600 w-4 h-2 absolute top-0 left-0"></div>
+        <div class="bg-blue-600 w-4 h-2 absolute bottom-0 left-0"></div>
+        <div class="bg-blue-600 w-2 h-2 absolute top-0 right-0"></div>
+        <div class="bg-blue-600 w-2 h-2 absolute bottom-0 right-0"></div>
+        <div class="flex flex-col gap-1 text-center items-center">
+            <p class="font-serif flex m-0 leading-4" id="fortune-text"></p>
+            <p class="flex m-0 text-sm leading-4" id="lucky-numbers"></p>
+        </div>
+    </div>
+</div>
