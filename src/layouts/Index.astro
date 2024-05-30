@@ -1,6 +1,7 @@
 ---
 import Barebones from './Barebones.astro';
 import Footer from '@components/Footer.astro';
+import Fortune from '@components/Fortune/Fortune.astro';
 import Header from '@components/Header.astro';
 
 const { title, description, pubDate, updatedDate, heroImage, filepath } =
@@ -12,6 +13,8 @@ const { title, description, pubDate, updatedDate, heroImage, filepath } =
     <main>
         <slot />
     </main>
+    <div class="grow"></div>
+    <Fortune />
     <!-- spacer so the footer goes to the bottom -->
     <div class="grow"></div>
     <hr class="pb-5" />
