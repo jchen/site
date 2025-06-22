@@ -56,3 +56,39 @@ This is Jiahua Chen's personal website built with Astro and deployed on Netlify.
 ## Development Notes
 
 The site uses Astro's islands architecture - most content is static HTML with selective hydration for interactive React components. The build process includes Netlify redirects file copying for deployment.
+
+## Performance Optimizations
+
+The site has been optimized for fast loading with the following implementations:
+
+### Build Configuration
+- **CSS Code Splitting**: Enabled for better caching (`cssCodeSplit: true`)
+- **Manual Chunks**: React vendor code separated for optimal caching
+- **Prefetch Optimization**: Only internal links prefetched (`selector: "a[href^='/']"`)
+- **Inline Stylesheets**: Small CSS automatically inlined (`inlineStylesheets: 'auto'`)
+
+### Image Optimization
+- **Responsive Images**: All images use `widths` and `sizes` attributes for optimal loading
+- **Lazy Loading**: All images and screenshots use `loading="lazy"`
+- **WebP Format**: Images automatically converted to WebP for smaller file sizes
+- **Multiple Sizes**: Screenshots use `widths={[300, 600]}`, posters use `widths={[400, 800, 1200]}`
+
+### Resource Loading
+- **Font Preconnect**: Adobe Fonts use preconnect for faster loading
+- **Favicon Preload**: Critical favicon resource preloaded
+- **YouTube Lazy Loading**: Video embeds use `params="loading=lazy"`
+
+### Compression
+- **Enhanced HTML Compression**: CSS and JS minified within HTML
+- **Asset Compression**: All CSS, HTML, and JS files compressed
+- **Image Compression**: Aggressive WebP compression for ~50-90% size reduction
+
+### File Naming Convention
+- **Image Assets**: Project images prefixed with `_` to avoid Astro processing warnings
+- **Import Paths**: Images imported as `import('./_image.png')` in MDX files
+
+### Performance Results
+- Build generates ~43 optimized image variants
+- HTML pages compressed 5-25% in size
+- JavaScript bundle split for better caching (184KB main, separate vendor chunk)
+- Responsive image sizes automatically served based on device capabilities

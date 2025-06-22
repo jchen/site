@@ -17,11 +17,33 @@ export default defineConfig({
         react(),
         compress({
             css: true,
-            html: true,
+            html: {
+                removeAttributeQuotes: false,
+                caseSensitive: true,
+                minifyCSS: true,
+                minifyJS: true,
+            },
             js: true,
             img: false,
             svg: false,
         }),
-        prefetch(),
+        prefetch({
+            selector: "a[href^='/']", // Only prefetch internal links
+        }),
     ],
+    build: {
+        inlineStylesheets: 'auto', // Inline small CSS automatically
+    },
+    vite: {
+        build: {
+            cssCodeSplit: true, // Split CSS for better caching
+            rollupOptions: {
+                output: {
+                    manualChunks: {
+                        'react-vendor': ['react', 'react-dom'],
+                    },
+                },
+            },
+        },
+    },
 });
